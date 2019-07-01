@@ -17,6 +17,13 @@ compress: lib/generated/data.js
 		lib/generated/data.js \
 		-c > lib/generated/data-compressed.js
 
+download-cities:
+	wget http://download.geonames.org/export/dump/cities1000.zip
+	unzip cities1000.zip -d data/raw
+	wget http://download.geonames.org/export/dump/cities15000.zip
+	unzip cities15000.zip -d data/raw
+	http://download.geonames.org/export/dump/countryInfo.txt -O data/raw/countryInfo.txt
+
 download-timezone-info:
 	wget https://raw.githubusercontent.com/moment/moment-timezone/develop/data/packed/latest.json -O data/timezones.json
 	wget https://raw.githubusercontent.com/unicode-org/cldr/master/common/supplemental/windowsZones.xml -O data/windows_zones.xml
