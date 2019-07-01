@@ -3,3 +3,12 @@
 
   Available at http://timesched.pocoo.org/
 
+
+  # How to build
+  1. Clone this repo
+  2. Download the files in data\README
+  3. run `make download-timezone-info`
+  4. run `make all`
+  5. run `make build`
+  6. Deploy `deploy` folder
+
